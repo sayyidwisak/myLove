@@ -1,0 +1,162 @@
+body {
+    background-image: url(../../../assets/img/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.wrapper .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: -3rem;
+}
+
+.wrapper .profile .imgContainer {
+    background-color: white;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    /* border: 2px solid #d15e54; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/img/momentProfile.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper .profile .text {
+    font-size: 15px;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 3px solid #d15e54;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-indent: 0;
+}
+
+.container #countdown p {
+    color: red;
+    font-size: 80px;
+    font-weight: bold;
+    word-spacing: 20px;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.container #countdown .date {
+    font-size: 27px;
+    margin-top: -4rem;
+}
+
+.container #countdown .date span:first-child {
+    color: black;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 200px;
+}
+
+.container #countdown .date span:nth-child(2) {
+    color: black;
+    text-align: center;
+    margin-right: 150px;
+}
+
+.container #countdown .date span:nth-child(3) {
+    color: black;
+    text-align: center;
+    margin-right: 140px;
+}
+
+.back {
+    margin-top: 2rem;
+}
+
+.back a img {
+    width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .wrapper {
+        margin-top: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container #countdown p {
+        color: red;
+        font-size: 35px;
+        font-weight: bold;
+        word-spacing: 10px;
+    }
+
+    .container #countdown .date {
+        font-size: 15px;
+        margin-top: -15px;
+    }
+
+    .container #countdown .date span:first-child {
+        margin-left: 15px;
+        margin-right: 85px;
+    }
+
+    .container #countdown .date span:nth-child(2) {
+        margin-right: 50px;
+    }
+
+    .container #countdown .date span:nth-child(3) {
+        margin-right: 45px;
+    }
+
+    .wrapper .profile {
+        gap: 20px;
+        margin-bottom: 0rem;
+        flex-direction: column;
+    }
+
+    .wrapper .profile .imgContainer {
+        padding: 10px;
+        width: 70px;
+        height: 70px;
+        /* border: 2px solid #d15e54; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrapper .profile .text {
+        font-size: 15px;
+        background-color: white;
+        padding: 10px 30px;
+        border-radius: 30px;
+        border: 3px solid #d15e54;
+    }
+}

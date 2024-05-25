@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa70c6f704.js" crossorigin="anonymous"></script>
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="profile">
+            <div class="imgContainer">
+                <!-- <img src="../../assets/img/momentProfile.jpeg" alt="">a -->
+            </div>
+            <div class="text">how long we've been together?</div>
+        </div>
+        <div class="container">
+            <div id="countdown"></div>
+        </div>
+        <div class="back">
+            <a href="../../">
+                <img src="../../assets/img/left.png" alt="">
+            </a>
+        </div>
+    </div>
+
+<script>
+    // Tanggal awal (11 November)
+        const startDate = new Date('November 11, 2023 00:00:00').getTime();
+
+        // Fungsi untuk mengupdate hitungan mundur setiap 1 detik
+        const updateCountdown = () => {
+            // Waktu sekarang
+            const now = new Date().getTime();
+
+            // Hitung selisih waktu antara sekarang dan tanggal awal
+            const difference = now - startDate;
+
+            // Hitung jumlah hari, jam, menit, dan detik
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Tampilkan hasilnya di elemen dengan id "countdown"
+            document.getElementById('countdown').innerHTML = `
+        <p><span>${days}</span> : ${hours} : ${minutes} : ${seconds}</p>
+        <div class="date"><span>Days</span><span>Hours</span><span>Minutes</span><span>Seconds</span></div>
+    `;
+        };
+
+        // Panggil fungsi updateCountdown setiap 1 detik
+        setInterval(updateCountdown, 1000);
+
+</script>
+
+</body>
+
+</html>

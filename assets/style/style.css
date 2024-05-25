@@ -1,0 +1,57 @@
+body {
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 2rem;
+    margin-top: -1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.container {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.container a img {
+    width: 120px;
+    height: 120px;
+    background: none;
+}
+
+.container a .text {
+    color: white;
+    text-align: center;
+    font-size: 120%;
+}
+
+.countdown {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+}
+
